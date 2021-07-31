@@ -29,7 +29,7 @@
 <script>
 import { bech32 } from '@stakeordie/griptape.js'
 import { mapState, mapActions } from 'pinia'
-import { useViewingKeyStore } from '@/modules/viewing-keys'
+import { useViewingKeyStore } from '../modules/viewing-keys'
 
 export default {
   props: {
