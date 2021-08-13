@@ -59,7 +59,11 @@ export const useViewingKeyStore = defineStore({
 
       } else {
         const response = await contract.createViewingKey()
-        const key = response.viewing_key.key
+        const result = response.parse()
+
+        const [response_key] = Object.keys(result)
+
+        let key = result?.[response_key].key
 
         // Update state
         this.$patch((state) => {
